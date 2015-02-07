@@ -1,10 +1,12 @@
 package com.sanguo.payment.main;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 
 import com.sanguo.payment.alipay.util.Submit;
+import com.sanguo.payment.zxing.activity.CaptureActivity;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
@@ -17,10 +19,14 @@ import java.util.Map;
  */
 public class CreateAndPay extends AsyncTask<Map<String, String>, Integer, String> {
 
-    AlertDialog dialog = null;
+    DataFinishListener dataFinishListener;
 
-    CreateAndPay(AlertDialog dialog){
-        this.dialog = dialog;
+    public void setFinishListener(DataFinishListener dataFinishListener) {
+        this.dataFinishListener = dataFinishListener;
+    }
+
+    public interface DataFinishListener {
+        void dataFinishSuccessfully(String data);
     }
 
     @Override
@@ -67,14 +73,6 @@ public class CreateAndPay extends AsyncTask<Map<String, String>, Integer, String
 
     @Override
     protected void onPostExecute(String val) {
-        if (val == null){
-            dialog.setTitle("错误");
-            dialog.setMessage("请求失败");
-            dialog.show();
-        }else{
-            dialog.setTitle("信息");
-            dialog.setMessage(val);
-            dialog.show();
-        }
+        dataFinishListener.dataFinishSuccessfully(val);
     }
 }

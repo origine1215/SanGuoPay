@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
@@ -20,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     EditText edit;
     KeyboardView keyboardView;
@@ -130,12 +131,12 @@ public class MainActivity extends ActionBarActivity {
                     sParaTemp.put("dynamic_id", bundle.getString("result"));
                     sParaTemp.put("_input_charset", Config.input_charset);
 
-                    dialog = new AlertDialog.Builder(MainActivity.this)
-                            .setPositiveButton("确定", null)
-                            .create();
+                    //dialog = new AlertDialog.Builder(MainActivity.this)
+                     //       .setPositiveButton("确定", null)
+                    //        .create();
 
-                    CreateAndPay pay = new CreateAndPay(dialog);
-                    pay.execute(sParaTemp);
+                   // CreateAndPay pay = new CreateAndPay(dialog);
+                   // pay.execute(sParaTemp);
                 }
                 break;
         }
@@ -162,7 +163,7 @@ public class MainActivity extends ActionBarActivity {
                 .setPositiveButton("确定", null)
                 .create();
         img = new ImageView(MainActivity.this);
-        GetQrcode getCode = new GetQrcode(dialog, img);
+        GetQrcode getCode = new GetQrcode(img);
         getCode.execute(sParaTemp);
     }
 

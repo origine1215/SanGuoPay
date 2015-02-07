@@ -35,6 +35,10 @@ import android.widget.RelativeLayout;
 
 import com.google.zxing.Result;
 import com.sanguo.payment.R;
+import com.sanguo.payment.alipay.config.Config;
+import com.sanguo.payment.main.CreateAndPay;
+import com.sanguo.payment.main.CreateAndPay.DataFinishListener;
+import com.sanguo.payment.main.FKCGActivity;
 import com.sanguo.payment.zxing.camera.CameraManager;
 import com.sanguo.payment.zxing.decode.DecodeThread;
 import com.sanguo.payment.zxing.utils.BeepManager;
@@ -43,6 +47,8 @@ import com.sanguo.payment.zxing.utils.InactivityTimer;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * This activity opens the camera and does the actual scanning on a background
@@ -78,6 +84,8 @@ public final class CaptureActivity extends Activity implements Callback {
 	}
 
 	private boolean isHasSurface = false;
+
+    private String total_fee;
 
 	@Override
 	public void onCreate(Bundle icicle) {
@@ -190,6 +198,7 @@ public final class CaptureActivity extends Activity implements Callback {
 		inactivityTimer.onActivity();
 		beepManager.playBeepSoundAndVibrate();
 
+        /*
 		//bundle.putInt("width", mCropRect.width());
 		//bundle.putInt("height", mCropRect.height());
 		bundle.putString("result", rawResult.getText());
@@ -198,7 +207,40 @@ public final class CaptureActivity extends Activity implements Callback {
         intent.putExtras(bundle);
         this.setResult(RESULT_OK, intent);
         this.finish();
+
 		//startActivity(new Intent(CaptureActivity.this, ResultActivity.class).putExtras(bundle));
+		*/
+        Bundle extras = getIntent().getExtras();
+        total_fee = extras.getString("total_fee");
+
+        Map<String, String> sParaTemp = new HashMap<String, String>();
+        sParaTemp.put("service", "alipay.acquire.createandpay");
+        sParaTemp.put("partner", Config.partner);
+        sParaTemp.put("seller_email", Config.seller_email);
+        sParaTemp.put("out_trade_no", String.valueOf(System.currentTimeMillis()));
+        sParaTemp.put("subject", "支付宝线下支付");
+        sParaTemp.put("total_fee", total_fee);
+        sParaTemp.put("product_code", "BARCODE_PAY_OFFLINE");
+        sParaTemp.put("dynamic_id_type", "qrcode");
+        sParaTemp.put("dynamic_id", rawResult.getText());
+        sParaTemp.put("_input_charset", Config.input_charset);
+
+
+        CreateAndPay pay = new CreateAndPay();
+        pay.setFinishListener(new DataFinishListener()
+        {
+            public void dataFinishSuccessfully(String data) {
+                Intent intent = new Intent();
+                if (data.equals("支付成功")){
+                    intent.putExtra("total_fee", total_fee);
+                    intent.setClass(CaptureActivity.this, FKCGActivity.class);
+                }else{
+                    
+                }
+                startActivity(intent);
+            }
+        });
+        pay.execute(sParaTemp);
 	}
 
 	private void initCamera(SurfaceHolder surfaceHolder) {

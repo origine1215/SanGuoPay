@@ -24,12 +24,10 @@ import java.util.Map;
  */
 public class GetQrcode extends AsyncTask<Map<String, String>, Integer, Bitmap> {
 
-    AlertDialog dialog = null;
     ImageView img = null;
 
-    GetQrcode(AlertDialog dialog, ImageView img){
+    GetQrcode(ImageView img){
         super();
-        this.dialog = dialog;
         this.img = img;
     }
 
@@ -107,14 +105,8 @@ public class GetQrcode extends AsyncTask<Map<String, String>, Integer, Bitmap> {
     @Override
     protected void onPostExecute(Bitmap bmp) {
         if (bmp == null){
-            dialog.setTitle("错误");
-            dialog.setMessage("请求失败");
-            dialog.show();
         }else{
             img.setImageBitmap(bmp);
-            dialog.setTitle("二维码");
-            dialog.setView(img);
-            dialog.show();
         }
     }
 }

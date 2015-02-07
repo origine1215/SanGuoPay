@@ -22,5 +22,35 @@
     <item name="quit" type="id"/>
     <item name="restart_preview" type="id"/>
     <item name="return_scan_result" type="id"/>
-
+    <item name="sy2" type="id"/>
+    <item name="sy3" type="id"/>
+    <item name="sy4" type="id"/>
+    <item name="sy6" type="id"/>
+    <item name="jsq1" type="id"/>
+    <item name="jsq2" type="id"/>
+    <item name="jsq3" type="id"/>
+    <item name="jsq4" type="id"/>
+    <item name="jsq5" type="id"/>
+    <item name="jsq6" type="id"/>
+    <item name="jsq7" type="id"/>
+    <item name="jsq8" type="id"/>
+    <item name="jsq9" type="id"/>
+    <item name="jsq10" type="id"/>
+    <item name="jsq11" type="id"/>
+    <item name="jsq12" type="id"/>
+    <item name="jsq13" type="id"/>
+    <item name="jsq14" type="id"/>
+    <item name="jsq15" type="id"/>
+    <item name="jsq16" type="id"/>
+    <item name="jsq17" type="id"/>
+    <item name="jsq18" type="id"/>
+    <item name="jsq19" type="id"/>
+    <item name="jsq20" type="id"/>
+    <item name="jsq21" type="id"/>
+    <item name="jsq22" type="id"/>
+    <item name="fkcg1" type="id"/>
+    <item name="fkm1" type="id"/>
+    <item name="fkm2" type="id"/>
+    <item name="dl1" type="id"/>
+    <item name="dl2" type="id"/>
 </resources>

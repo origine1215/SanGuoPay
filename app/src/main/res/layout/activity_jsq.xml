@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"  android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView android:src="@drawable/jsq1"
+            android:id="@+id/jsq1"
+        android:layout_width="35dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop">
+    </ImageView>
+        <ImageView android:src="@drawable/jsq2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"  android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView android:src="@drawable/jsq4"
+        android:id="@+id/jsq4"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop">
+    </ImageView>
+    <ImageView android:src="@drawable/jsq5"
+        android:id="@+id/jsq5"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop">
+    </ImageView>
+    <ImageView android:src="@drawable/jsq6"
+        android:id="@+id/jsq6"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop">
+    </ImageView>
+    <ImageView android:src="@drawable/jsq7"
+        android:id="@+id/jsq7"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop">
+    </ImageView>
+</LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"  android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView android:src="@drawable/jsq10"
+            android:id="@+id/jsq10"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+        <ImageView android:src="@drawable/jsq11"
+            android:id="@+id/jsq11"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+        <ImageView android:src="@drawable/jsq8"
+            android:id="@+id/jsq8"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+        <ImageView android:src="@drawable/jsq9"
+            android:id="@+id/jsq9"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"  android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView android:src="@drawable/jsq12"
+            android:id="@+id/jsq12"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+        <ImageView android:src="@drawable/jsq13"
+            android:id="@+id/jsq13"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+        <ImageView android:src="@drawable/jsq14"
+            android:id="@+id/jsq14"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+        <ImageView android:src="@drawable/jsq15"
+            android:id="@+id/jsq15"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"  android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView android:src="@drawable/jsq16"
+            android:id="@+id/jsq16"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+        <ImageView android:src="@drawable/jsq17"
+            android:id="@+id/jsq17"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+        <ImageView android:src="@drawable/jsq18"
+            android:id="@+id/jsq18"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+        <ImageView android:src="@drawable/jsq19"
+            android:id="@+id/jsq19"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"  android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView android:src="@drawable/jsq20"
+            android:id="@+id/jsq20"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+        <ImageView android:src="@drawable/jsq21"
+            android:id="@+id/jsq21"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+    </LinearLayout>
+    <ImageView android:src="@drawable/jsq22"
+        android:id="@+id/jsq22"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+         >
+    </ImageView>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<ImageView android:src="@drawable/sy2"
+        android:id="@+id/sy2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true">
+    </ImageView>
+    <ImageView android:src="@drawable/sy3"
+        android:id="@+id/sy3"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/sy2">
+    </ImageView>
+    <ImageView android:src="@drawable/sy4"
+        android:id="@+id/sy4"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/sy3"
+        android:scaleType="centerCrop"
+        >
+    </ImageView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:layout_below="@+id/sy4"
+        />
+    <ImageView android:src="@drawable/sy6"
+        android:id="@+id/sy6"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        >
+    </ImageView>
+    <ImageView android:src="@drawable/sy5"
+        android:layout_width="155dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentBottom="true"
+
+        android:layout_toLeftOf="@+id/sy6"
+        >
+    </ImageView>
+    <ImageView android:src="@drawable/sy7"
+        android:layout_width="155dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/sy6"
+        android:layout_toRightOf="@+id/sy6"
+        >
+    </ImageView>
+</RelativeLayout>

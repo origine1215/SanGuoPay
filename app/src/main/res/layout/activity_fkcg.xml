@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"  android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView android:src="@drawable/fkcg1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+        <ImageView android:src="@drawable/fkcg2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+    </LinearLayout>
+    <ImageView android:src="@drawable/fkcg3"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop">
+    </ImageView>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"  android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView android:src="@drawable/fkcg4"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/fkcg1"
+            android:layout_height="60dp"
+            android:text="0.01元"
+            android:textSize="35sp"
+            android:textColor="#ed7715"
+            android:gravity="center_vertical"
+            android:background="#ffffff"
+            />
+        </LinearLayout>
+    <ImageView android:src="@drawable/fkcg9"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop">
+    </ImageView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        />
+</LinearLayout>
