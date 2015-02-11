@@ -218,13 +218,13 @@ public final class CaptureActivity extends Activity implements Callback {
         sParaTemp.put("partner", Config.partner);
         sParaTemp.put("seller_email", Config.seller_email);
         sParaTemp.put("out_trade_no", String.valueOf(System.currentTimeMillis()));
-        sParaTemp.put("subject", "支付宝线下支付");
+        sParaTemp.put("subject", Config.company + "线下支付");
         sParaTemp.put("total_fee", total_fee);
         sParaTemp.put("product_code", "BARCODE_PAY_OFFLINE");
         sParaTemp.put("dynamic_id_type", "qrcode");
         sParaTemp.put("dynamic_id", rawResult.getText());
         sParaTemp.put("_input_charset", Config.input_charset);
-
+        sParaTemp.put("notify_url", "http://weixin.51sanguo.cn/index.php/Wap/Offline/notify");
 
         CreateAndPay pay = new CreateAndPay();
         pay.setFinishListener(new DataFinishListener()

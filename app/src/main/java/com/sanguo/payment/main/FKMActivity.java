@@ -2,7 +2,6 @@ package com.sanguo.payment.main;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -17,6 +16,7 @@ import java.util.Map;
  */
 public class FKMActivity  extends Activity {
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fkm);
@@ -44,10 +44,10 @@ public class FKMActivity  extends Activity {
         sParaTemp.put("_input_charset", Config.input_charset);
         sParaTemp.put("seller_email", Config.seller_email);
         sParaTemp.put("out_trade_no", out_trade_no);
-        sParaTemp.put("subject", "三国淘园线下支付");
+        sParaTemp.put("subject", Config.company + "线下支付");
         sParaTemp.put("total_fee", total_fee);
         sParaTemp.put("product_code", "QR_CODE_OFFLINE");
-
+        sParaTemp.put("notify_url", "http://weixin.51sanguo.cn/index.php/Wap/Offline/notify");
         GetQrcode getCode = new GetQrcode(img);
         getCode.execute(sParaTemp);
     }

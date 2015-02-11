@@ -25,7 +25,9 @@
     <item name="sy2" type="id"/>
     <item name="sy3" type="id"/>
     <item name="sy4" type="id"/>
+    <item name="sy5" type="id"/>
     <item name="sy6" type="id"/>
+    <item name="sy7" type="id"/>
     <item name="jsq1" type="id"/>
     <item name="jsq2" type="id"/>
     <item name="jsq3" type="id"/>
@@ -53,4 +55,29 @@
     <item name="fkm2" type="id"/>
     <item name="dl1" type="id"/>
     <item name="dl2" type="id"/>
+    <item name="dl3" type="id"/>
+    <item name="dl4" type="id"/>
+    <item name="dl5" type="id"/>
+    <item name="dl6" type="id"/>
+    <item name="dl7" type="id"/>
+    <item name="zhsz1" type="id"/>
+    <item name="zhsz2" type="id"/>
+    <item name="zhsz3" type="id"/>
+    <item name="zhsz4" type="id"/>
+    <item name="zhsz5" type="id"/>
+    <item name="zhsz6" type="id"/>
+    <item name="zhsz7" type="id"/>
+    <item name="zhsz8" type="id"/>
+    <item name="zc1" type="id"/>
+    <item name="zc2" type="id"/>
+    <item name="zc3" type="id"/>
+    <item name="zc4" type="id"/>
+    <item name="zc5" type="id"/>
+    <item name="tj1" type="id"/>
+    <item name="tj2" type="id"/>
+    <item name="tj3" type="id"/>
+    <item name="list_tj1" type="id"/>
+    <item name="list_tj2" type="id"/>
+    <item name="list_tj3" type="id"/>
+    <item name="list_tj4" type="id"/>
 </resources>

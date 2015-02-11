@@ -9,7 +9,7 @@
 
         >
         <activity
-            android:name=".main.SYActivity"
+            android:name=".main.DLActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -26,7 +26,7 @@
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".main.FKCGActivity"
+            android:name=".main.SYActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:screenOrientation="portrait"
         />
@@ -41,7 +41,22 @@
             android:screenOrientation="portrait"
         />
         <activity
-            android:name=".main.DLActivity"
+            android:name=".main.ZHSZActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".main.ZCActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".main.FKCGActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".main.TJActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:screenOrientation="portrait"
             />

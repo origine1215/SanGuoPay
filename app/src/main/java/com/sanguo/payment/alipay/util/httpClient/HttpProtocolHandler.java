@@ -156,7 +156,7 @@ public class HttpProtocolHandler {
             ex.printStackTrace();
             return null;
         } catch (Exception ex) {
-
+            ex.printStackTrace();
             return null;
         } finally {
             method.releaseConnection();

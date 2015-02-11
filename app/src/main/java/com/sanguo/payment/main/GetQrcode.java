@@ -1,22 +1,24 @@
 package com.sanguo.payment.main;
 
-import android.app.AlertDialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.widget.ImageView;
 
+import com.sanguo.payment.alipay.config.Config;
 import com.sanguo.payment.alipay.util.Submit;
+import com.sanguo.payment.dbutil.HttpQuery;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
-
+import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -44,7 +46,7 @@ public class GetQrcode extends AsyncTask<Map<String, String>, Integer, Bitmap> {
             return null;
         }
 
-        String url = xmlAnalyze(xml);
+        String url = xmlAnalyze(xml, params[0]);
         if (url == null) {
             return null;
         }
@@ -53,7 +55,8 @@ public class GetQrcode extends AsyncTask<Map<String, String>, Integer, Bitmap> {
         return bitmap;
     }
 
-    private String xmlAnalyze(String xml){
+    //解析返回xml字符串
+    private String xmlAnalyze(String xml, Map<String, String> paramMap){
         Document doc = null;
         String ret;
 
@@ -71,12 +74,43 @@ public class GetQrcode extends AsyncTask<Map<String, String>, Integer, Bitmap> {
                 return null;
             }
 
+            //更新数据库
+            updateRecord(paramMap);
+
             ret = alipayElement.elementText("pic_url");
         }catch(Exception e){
             return null;
         }
 
         return ret;
+    }
+
+    //将交易记录插入数据库
+    private int updateRecord(Map<String, String> paramMap){
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("partner", Config.partner);
+        map.put("key", Config.key);
+        map.put("out_trade_no", paramMap.get("out_trade_no"));
+        map.put("subject", paramMap.get("subject"));
+        map.put("product_code", paramMap.get("product_code"));
+        map.put("total_fee", paramMap.get("total_fee"));
+        map.put("dynamic_id_type", "");
+        map.put("dynamic_id", "");
+
+       String json = new JSONObject(map).toString();
+        Map<String, String> dataMap = new HashMap<String, String>();
+        dataMap.put("data", json);
+        String url = "http://weixin.51sanguo.cn/index.php/Wap/Offline/insert";
+        try {
+            String retVal = HttpQuery.buildRequest(dataMap, url);
+            JSONObject jsonObject = new JSONObject(retVal);
+            Map retMap = HttpQuery.toMap(jsonObject.toString());
+            int ret = Integer.valueOf(retMap.get("error").toString());
+            return ret;
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return 2;
     }
 
     private Bitmap getBmp(String url){

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+    <ImageView android:src="@drawable/tj_01"
+        android:id="@+id/tj1"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+    </ImageView>
+    <ImageView android:src="@drawable/tj_02"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:layout_toRightOf="@+id/tj1"
+        android:layout_alignParentTop="true">
+    </ImageView>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tj2"
+        android:layout_below="@+id/tj1"
+        />
+</RelativeLayout>

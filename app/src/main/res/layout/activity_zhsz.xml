@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <ImageView android:src="@drawable/zfb_01"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:id="@+id/zhsz1"
+        android:scaleType="centerCrop"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+    </ImageView>
+    <ImageView android:src="@drawable/zfb_02"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:layout_toRightOf="@+id/zhsz1"
+        android:layout_alignParentTop="true">
+    </ImageView>
+    <ImageView android:src="@drawable/zfb_03"
+        android:layout_width="wrap_content"
+        android:id="@+id/zhsz2"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/zhsz1"
+        >
+    </ImageView>
+    <EditText android:layout_width="500px"
+    android:layout_height="wrap_content"
+    android:hint="公司简称"
+    android:textColor="#000000"
+    android:id="@+id/zhsz3"
+    android:singleLine="true"
+    android:layout_below="@+id/zhsz2"
+    android:layout_centerHorizontal="true"/>
+    <EditText android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:hint="支付宝账号"
+        android:textColor="#000000"
+        android:id="@+id/zhsz4"
+        android:singleLine="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/zhsz3"
+        android:layout_centerHorizontal="true"/>
+    <EditText android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:hint="Pid"
+        android:textColor="#000000"
+        android:id="@+id/zhsz5"
+        android:singleLine="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/zhsz4"
+        android:layout_centerHorizontal="true"/>
+    <EditText android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:hint="Key"
+        android:textColor="#000000"
+        android:id="@+id/zhsz6"
+        android:singleLine="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/zhsz5"
+        android:layout_centerHorizontal="true"/>
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/zhsz7"
+        android:textColor="#FF0000"
+        android:layout_below="@+id/zhsz6"
+        android:layout_centerHorizontal="true"
+        />
+    <ImageView android:src="@drawable/zfb_17"
+        android:id="@+id/zhsz8"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/zhsz7"
+        android:layout_centerHorizontal="true"
+        >
+    </ImageView>
+    <ImageView android:src="@drawable/zfb_18"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/zhsz8"
+        android:layout_centerHorizontal="true"
+        >
+    </ImageView>
+</RelativeLayout>

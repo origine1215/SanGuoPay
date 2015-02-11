@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="horizontal"  android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+
         <ImageView android:src="@drawable/fkm2"
             android:id="@+id/fkm1"
             android:layout_width="35dp"
             android:layout_height="50dp"
-            android:scaleType="centerCrop">
+            android:scaleType="centerCrop"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true">
         </ImageView>
         <ImageView android:src="@drawable/fkm3"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:scaleType="centerCrop">
+            android:scaleType="fitXY"
+            android:layout_toRightOf="@+id/fkm1"
+            android:layout_alignParentTop="true">
         </ImageView>
-    </LinearLayout>
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:id="@+id/fkm2"
-        android:background="#ffffff"
-        android:scaleType="centerCrop">
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/fkm1"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY">
     </ImageView>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#ffffff"
-        />
-</LinearLayout>
+</RelativeLayout>
