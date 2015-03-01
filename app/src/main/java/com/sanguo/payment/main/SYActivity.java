@@ -8,9 +8,10 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.igexin.sdk.PushManager;
+
 import com.sanguo.payment.R;
 import com.sanguo.payment.alipay.config.Config;
-
 /**
  * Created by Administrator on 2015/2/3.
  */
@@ -21,6 +22,11 @@ public class SYActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sy);
+
+        //初始化个推
+        PushManager pushManager = PushManager.getInstance();
+        pushManager.initialize(this.getApplicationContext());
+        pushManager.bindAlias(this.getApplicationContext(), Config.name);
 
         ImageView shoukuan =  (ImageView)findViewById(R.id.sy6);
         shoukuan.setOnClickListener(

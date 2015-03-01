@@ -3,7 +3,6 @@ package com.sanguo.payment.main;
 import android.os.AsyncTask;
 
 import com.sanguo.payment.alipay.config.Config;
-import com.sanguo.payment.alipay.util.Submit;
 import com.sanguo.payment.dbutil.HttpQuery;
 
 import org.dom4j.Document;
@@ -32,6 +31,7 @@ public class CreateAndPay extends AsyncTask<Map<String, String>, Integer, String
 
     @Override
     protected String doInBackground(Map<String, String>... params) {
+        /*
         this.paramMap = params[0];
         String xml = null;
         try {
@@ -46,6 +46,22 @@ public class CreateAndPay extends AsyncTask<Map<String, String>, Integer, String
 
         String ret = xmlAnalyze(xml);
         return  ret;
+        */
+
+        String queryUrl = "http://app.51sanguo.cn/index.php/HttpService/Offline/createAndPay";
+        try {
+            String retVal = HttpQuery.buildRequest(params[0], queryUrl);
+            JSONObject jsonObject = new JSONObject(retVal);
+            Map map = HttpQuery.toMap(jsonObject.toString());
+            if (Integer.valueOf(map.get("error").toString()) == 0) {
+                return "支付成功";
+            }else{
+                return  "支付失败";
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return "支付失败";
     }
 
     private String xmlAnalyze(String xml){

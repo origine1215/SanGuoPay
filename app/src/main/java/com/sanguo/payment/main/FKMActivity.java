@@ -37,17 +37,14 @@ public class FKMActivity  extends Activity {
 
         ImageView img = (ImageView)findViewById(R.id.fkm2);
 
-        String out_trade_no = String.valueOf(System.currentTimeMillis());
         Map<String, String> sParaTemp = new HashMap<String, String>();
-        sParaTemp.put("service", "alipay.acquire.precreate");
         sParaTemp.put("partner", Config.partner);
-        sParaTemp.put("_input_charset", Config.input_charset);
+        sParaTemp.put("key", Config.key);
         sParaTemp.put("seller_email", Config.seller_email);
-        sParaTemp.put("out_trade_no", out_trade_no);
         sParaTemp.put("subject", Config.company + "线下支付");
         sParaTemp.put("total_fee", total_fee);
-        sParaTemp.put("product_code", "QR_CODE_OFFLINE");
-        sParaTemp.put("notify_url", "http://weixin.51sanguo.cn/index.php/Wap/Offline/notify");
+        sParaTemp.put("app_user", Config.name);
+
         GetQrcode getCode = new GetQrcode(img);
         getCode.execute(sParaTemp);
     }
