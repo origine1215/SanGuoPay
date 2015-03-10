@@ -37,4 +37,5 @@ dependencies {
     compile files('libs/json.jar')
     compile files('libs/GetuiExt-2.0.3.jar')
     compile files('libs/GetuiSdk2.4.1.0.jar')
+    compile files('libs/mpandroidchartlibrary-2-0-7.jar')
 }

@@ -3,6 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
 >
+
     <ImageView android:src="@drawable/tj_01"
         android:id="@+id/tj1"
         android:layout_width="60dp"
@@ -18,10 +19,30 @@
         android:layout_toRightOf="@+id/tj1"
         android:layout_alignParentTop="true">
     </ImageView>
+    <TextView
+        android:id="@+id/tj_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="时间："
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tj1"/>
+    <Spinner
+        android:id="@+id/tj_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tj1"
+        android:layout_toRightOf="@+id/tj_textview"/>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tj2"
-        android:layout_below="@+id/tj1"
+        android:layout_below="@+id/tj_spinner"
         />
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/tj_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tj_spinner"
+        android:visibility="gone"/>
 </RelativeLayout>

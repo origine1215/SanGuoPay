@@ -1,8 +1,8 @@
 package com.sanguo.payment.dbutil;
 
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.os.Bundle;
 
 import com.sanguo.payment.alipay.config.Config;
 
@@ -12,22 +12,24 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Administrator on 2015/2/10.
+ * Created by Administrator on 2015/3/8.
  */
-public class GetTradeList extends Thread {
+public class GetStatic extends Thread {
 
     Handler handler;
-    private static String queryUrl = "http://app.51sanguo.cn/index.php/HttpService/DbOperator/getTradeList";
+    String time;
+    private static String queryUrl = "http://app.51sanguo.cn/index.php/HttpService/DbOperator/getStatic";
 
-    public GetTradeList(Handler handler){
+    public GetStatic(Handler handler, String time){
         this.handler = handler;
+        this.time = time;
     }
 
     @Override
     public void run() {
-
         Map<String, String> paramMap = new HashMap<String, String>();
         paramMap.put("partner", Config.partner);
+        paramMap.put("time",this.time);
         Message msg = new Message();
 
         try {

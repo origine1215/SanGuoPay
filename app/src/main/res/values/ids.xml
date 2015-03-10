@@ -76,6 +76,9 @@
     <item name="tj1" type="id"/>
     <item name="tj2" type="id"/>
     <item name="tj3" type="id"/>
+    <item name="tj_textview" type="id"/>
+    <item name="tj_spinner" type="id"/>
+    <item name="tj_chart" type="id"/>
     <item name="list_tj1" type="id"/>
     <item name="list_tj2" type="id"/>
     <item name="list_tj3" type="id"/>
